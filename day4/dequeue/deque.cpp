@@ -23,6 +23,7 @@ int main() {
         cout << dq[i] << " ";
     }
     cout << endl;
+    
     cout << "Element at index 1: " << dq[1] << endl;
     dq.pop_front();
     dq.pop_back();
