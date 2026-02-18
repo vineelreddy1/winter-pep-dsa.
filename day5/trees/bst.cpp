@@ -36,7 +36,7 @@ void print(Node* root){
     }
     print(root->left);
     cout << root->data << " ";
-    print(root->right);
+   1
 }
 void print1(Node* root){
     if(root == NULL){
@@ -50,9 +50,9 @@ void print2(Node* root){
     if(root == NULL){
         return;
     }
+    print(root->left);
     print(root->right);
     cout << root->data << " ";
-    print(root->left);
 }
 
 
@@ -67,6 +67,8 @@ int main(){
     insert(root,6);
     insert(root,12);
     insert(root,21);
+    insert(root,13);
+    insert(root,7);
 
     cout << "in-oRdER: ";
     print(root);
