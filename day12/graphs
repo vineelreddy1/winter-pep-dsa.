@@ -1,0 +1,128 @@
+What is a Graph in DSA?
+
+A Graph is a non-linear data structure used to represent relationships between different objects.
+
+It consists of:
+
+Vertices (Nodes) → Represent entities
+
+Edges → Represent connections between vertices
+
+🔹 Real-Life Examples
+
+🗺 Google Maps → Cities connected by roads
+
+🌐 Social networks → People connected by friendships
+
+✈ Flight routes → Airports connected by flights
+
+💻 Internet → Computers connected by cables
+
+All these are modeled using graphs.
+
+🔹 Basic Terminology
+
+If we have:
+
+A ---- B
+|      |
+D ---- C
+
+A, B, C, D → Vertices
+
+Lines between them → Edges
+
+🔹 Types of Graphs
+1️⃣ Undirected Graph
+
+Edges have no direction.
+
+Example:
+
+A ---- B
+
+If A is connected to B, B is also connected to A.
+
+2️⃣ Directed Graph (Digraph)
+
+Edges have direction.
+
+A → B
+
+A points to B, but B may not point to A.
+
+3️⃣ Weighted Graph
+
+Edges have weights (cost, distance, time).
+
+Example:
+
+A --5-- B
+
+Weight = 5
+
+4️⃣ Unweighted Graph
+
+Edges have no cost.
+
+🔹 How Graph is Represented in Code?
+1️⃣ Adjacency Matrix (2D Array)
+int graph[4][4];
+
+Uses 2D array
+
+Space: O(V²)
+
+2️⃣ Adjacency List (Most Used)
+
+Using STL:
+
+#include <vector>
+using namespace std;
+
+vector<int> adj[5];
+
+Example:
+
+adj[0].push_back(1);
+adj[1].push_back(0);
+
+Space: O(V + E) ✅ (Better)
+
+🔹 Important Graph Concepts (Very Important for Interviews)
+
+Degree of vertex
+
+Path
+
+Cycle
+
+Connected components
+
+BFS (Breadth First Search)
+
+DFS (Depth First Search)
+
+Shortest Path (Dijkstra)
+
+Minimum Spanning Tree (Prim’s / Kruskal’s)
+
+🔹 Why Graph is Important?
+
+Graphs are used in:
+
+Networking
+
+AI
+
+Maps
+
+Recommendation systems
+
+Game development
+
+Compiler design
+
+🔥 Simple Definition (For Viva)
+
+A graph is a non-linear data structure consisting of vertices and edges that represent relationships between objects.
