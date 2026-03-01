@@ -1,0 +1,87 @@
+/*
+Dynamic Programming (DP) in DSA
+
+Dynamic Programming (DP) is an optimization technique used to solve problems by:
+
+Breaking them into smaller subproblems
+
+Solving each subproblem only once
+
+Storing the result to avoid recomputation
+
+🧠 When to Use DP?
+
+A problem can be solved using DP if it has:
+
+1️ -> Overlapping Subproblems
+
+Same subproblems are solved multiple times.
+
+Example: Fibonacci
+
+fib(5) = fib(4) + fib(3)
+fib(4) = fib(3) + fib(2)
+
+Here fib(3) is calculated multiple times.
+
+2️ ->  Optimal Substructure
+
+Optimal solution of a problem depends on optimal solutions of subproblems.
+
+Example:
+
+Shortest Path
+
+Knapsack
+
+Coin Change
+
+💡 Two Ways to Implement DP
+1️ --> Top-Down (Memoization)
+
+Recursion + storing results in array/map
+
+Easier to write
+
+Uses recursion stack
+
+int dp[100];
+
+int fib(int n) {
+    if(n <= 1) return n;
+    
+    if(dp[n] != -1)
+        return dp[n];
+    
+    return dp[n] = fib(n-1) + fib(n-2);
+}
+
+Time: O(n)
+Space: O(n)
+
+2️ -- > Bottom-Up (Tabulation)
+
+Iterative
+
+No recursion
+
+Usually preferred in interviews
+
+int fib(int n) {
+    if(n <= 1) return n;
+    
+    int dp[n+1];
+    dp[0] = 0;
+    dp[1] = 1;
+    
+    for(int i = 2; i <= n; i++)
+        dp[i] = dp[i-1] + dp[i-2];
+    
+    return dp[n];
+}
+
+Time: O(n)
+Space: O(n)
+
+
+*/
